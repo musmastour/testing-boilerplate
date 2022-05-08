@@ -3,13 +3,13 @@
 const expect = require('chai').expect;
 
 exports.dataTypeValidator = function (body) {
-    body.should.have.property('id').which.is.a.Number();
-    body.should.have.property('name').which.is.a.String();
-    body.should.have.property('fName').which.is.a.String();
-    body.should.have.property('lName').which.is.a.String();
-    body.should.have.property('age').which.is.a.Number();
-    body.should.have.property('powers').which.is.an.Array().and.not.be.empty();
-    body.should.have.property('killer').which.is.a.Boolean();
+    expect(body).to.have.property('id');
+    expect(body.user).to.have.property('name');
+    expect(body.user).to.have.property('fName');
+    expect(body.user).to.have.property('lName');
+    expect(body.user).to.have.property('age');
+    expect(body.user).to.have.property('powers');
+    expect(body.user).to.have.property('killer');
 };
 
 exports.dataValidator = function (user, body) {
